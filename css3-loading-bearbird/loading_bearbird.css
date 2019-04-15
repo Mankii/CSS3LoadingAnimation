@@ -1,0 +1,241 @@
+/*bayman.css*/
+body, html { padding: 0; margin: 0; width: 100%; height: 100%; overflow: hidden; }
+.w { position: relative; width: 100%; height: 100%; background: #f2e3c4; }
+.c { position: absolute; width: 362px; height: 362px; top: 50%; left: 50%; margin-left: -181px; margin-top: -181px; }
+.bird_area { position: absolute; width: 362px; height: 362px; top: 0; left: 0; background: url(dot.png) no-repeat right top; }
+.bird { position: absolute; width: 39px; height: 45px; top: 0; left: 50%; margin-left: -20px; }
+.bird .body { position: absolute; width: 39px; height: 39px; bottom: 1px; left: 0; background: #4679b0; border-radius: 50%; }
+.bird .eye { position: absolute; width: 12px; height: 14px; left: -1px; top: 17px; background: #fff; border-radius: 50%; }
+.bird .eye.right { left: 10px; top: 17px; }
+.bird .eye i { display: block; position: absolute; width: 4px; height: 4px; left: 5px; top: 9px; background: #201f24; border-radius: 50%; }
+.bird .eyebrow { position: absolute; width: 9px; height: 5px; left: 1px; top: 13px; background: #201f24; }
+.bird .eyebrow.right { left: 11px; top: 15px; }
+.bird .mouth { position: absolute; width: 0; height: 0; left: -4px; top: 30px; border-right: 18px solid #ffc648; border-top: 7px solid transparent; border-bottom: 1px solid transparent; transform: rotate(-32deg); }
+.bird .swing { position: absolute; width: 18px; height: 8px; right: -6px; top: 14px; background: #225e94; border-radius: 4px 4px 10px 8px; transform: rotate(-28deg); }
+.bird .swing.back { right: auto; left: -5px; top: 10px; transform: rotate(28deg); border-radius: 6px 4px 6px 18px; }
+.bird .foot { position: absolute; width: 18px; height: 8px; right: -2px; top: 26px; background: #ffc648; border-radius: 4px 12px 6px 8px; }
+.bird .foot.fore { top: 30px; right: 2px; }
+.bird .hair { position: absolute; width: 6px; height: 10px; left: 15px; top: 0; background: #225e94; border-radius: 20px 2px 6px 6px; transform: rotate(10deg); }
+.bird .hair.back { left: 22px; top: 1px; width: 5px; height: 8px; transform: rotate(13deg); border-radius: 18px 2px 6px 6px; }
+.bear_area { position: absolute; width: 208px; height: 208px; top: 50%; left: 50%; margin-left: -104px; margin-top: -90px; }
+.bear { position: absolute; width: 208px; height: 208px; top: 0; left: 0; }
+.bear .face, .bear .face .face_light { position: absolute; width: 170px; height: 150px; top: 29px; left: 50%; margin-left: -85px; background: #f1b182; border-radius: 50%; }
+.bear .face .face_light { top: -7px; left: 0; margin-left: 0; background: #f7c2a0; }
+.bear .ear { position: absolute; width: 70px; height: 70px; left: 5px; top: 12px; background: #f7c2a0; border-radius: 50%; }
+.bear .ear .ear_shadow { position: absolute; width: 42px; height: 42px; top: 14px; left: 10px; border-radius: 50%; background: #f1b182; }
+.bear .ear.right { left: auto; right: 5px; }
+.bear .ear.right .ear_shadow { left: auto; right: 10px; }
+.bear .eye, .bear .eye .eyeball_area { position: absolute; width: 68px; height: 68px; left: 30px; top: 62px; background: #ededed; border-radius: 50%; }
+.bear .eye.right { left: auto; right: 30px; }
+.bear .eye:after {/*眼皮*/
+content: ''; position: absolute; width: 68px; height: 0px; background: #f7c2a0;/*f7c2a0*/ animation: bearEyeMove 6s linear infinite; -webkit-animation: bearEyeMove 6s linear infinite; }
+.bear .eye .eyewhite { position: absolute; width: 68px; height: 65px; top: 0; left: 0; border-radius: 50%; background: #fff; }
+.bear .eye .eyeball_area { top: 0; left: 0; background: transparent; }
+.bear .eye .eyeball_area .eyeball { position: absolute; top: 7px; left: 50%; margin-left: -8px; width: 16px; height: 16px; background: #201f24; border-radius: 50%; }
+.bear .eye .eyeball_area .eyeball:after { content: ''; position: absolute; top: 0; right: 2px; width: 7px; height: 7px; background: #fff; border-radius: 50%; }
+.bear .mouth_area { position: absolute; width: 64px; height: 46px; left: 50%; margin-left: -32px; top: 108px; background: #fedccd; border-radius: 50%; }
+.bear .mouth_area .nose, .bear .mouth_area .lip { position: absolute; width: 24px; height: 18px; left: 50%; margin-left: -12px; top: 4px; border-radius: 50%; background: #5d381d; }
+.bear .mouth_area .lip { top: 12px; margin-left: -25px; left: 50%; background: #fedccd; border: 1px solid #5d381d; }
+.bear .mouth_area .lip:after { content: ''; position: absolute; top: -2px; right: 1px; width: 24px; height: 14px; background: #fedccd; }
+.bear .mouth_area .lip.right { margin-left: 0; left: auto; margin-right: -25px; right: 50%; }
+.bear .mouth_area .lip.right:after { content: ''; position: absolute; top: -2px; left: 1px; width: 24px; height: 14px; background: #fedccd; }
+.bear .mouth_area .tonge, .bear .mouth_area .tonge_light { position: absolute; width: 7px; height: 14px; left: 20px; top: 16px; border-radius: 4px; background: #df7e74; transform: rotate(22deg); }
+.bear .mouth_area .tonge_light { top: -1px; left: -1px; background: #fba097; transform: rotate(0deg) !important; }
+.words { position: absolute; bottom: -60px; left: 0; width: 100%; height: 40px; line-height: 40px; text-align: center; }
+.words span { font-size: 34px; color: #e68844; animation: fadeIn 6s linear infinite; }
+.delay_0.5 { animation-delay: 0.2s !important; }
+.delay_1 { animation-delay: 0.4s !important; }
+.delay_15 { animation-delay: 0.6s !important; }
+.delay_2 { animation-delay: 0.8s !important; }
+.delay_25 { animation-delay: 1s !important; }
+.delay_3 { animation-delay: 1.2s !important; }
+.delay_35 { animation-delay: 1.4s !important; }
+.delay_4 { animation-delay: 1.6s !important; }
+.delay_45 { animation-delay: 1.8s !important; }
+.delay_5 { animation-delay: 2s !important; }
+.delay_55 { animation-delay: 2.2s !important; }
+@keyframes fadeIn {
+	40% { color: #e68844; }
+	50% { color: #2288e4; }
+}
+
+/* -----------------------bear animation--------------------- */
+.bearEyeMove {/*眼皮*/
+animation: bearEyeMove 6s linear infinite; -webkit-animation: bearEyeMove 6s linear infinite; }
+@keyframes bearEyeMove {
+	0% { height: 0px; }
+	50% { height: 34px; }
+	100% { height: 0; }
+}
+@-webkit-keyframes bearEyeMove {
+	0% { -webkit-transform: rotate(0deg); }
+	100% { -webkit-transform: rotate(-360deg); }
+}
+@-moz-keyframes bearEyeMove {
+	0% { -moz-transform: rotate(0deg); }
+	100% { -moz-transform: rotate(-360deg); }
+}
+@-o-keyframes bearEyeMove {
+	0% { -o-transform: rotate(0deg); }
+	100% { -o-transform: rotate(-360deg); }
+}
+.tongeMove {/*舌头*/
+animation: tongeMove 12s linear infinite; -webkit-animation: tongeMove 12s linear infinite; }
+@keyframes tongeMove {
+	0% { transform: rotate(48deg) translate(0, 0); }
+	50% { transform: rotate(48deg) translate(0, 0); }
+	51% { transform: rotate(24deg) translate(2px, 4px); }
+	52% { transform: rotate(0deg)  translate(6px, 6px); }
+	53% { transform: rotate(-24deg)  translate(10px, 6px); }
+	54% { transform: rotate(-48deg)  translate(10px, 4px); }
+	55% { transform: rotate(-62deg)  translate(10px, 0); }
+	56% { transform: rotate(48deg) translate(0, 0); }
+}
+
+/*@-webkit-keyframes tongeMove {
+	0% { -webkit-transform: rotate(0deg); }
+	100% { -webkit-transform: rotate(-360deg); }
+}
+@-moz-keyframes tongeMove {
+	0% { -moz-transform: rotate(0deg); }
+	100% { -moz-transform: rotate(-360deg); }
+}
+@-o-keyframes tongeMove {
+	0% { -o-transform: rotate(0deg); }
+	100% { -o-transform: rotate(-360deg); }
+}*/
+
+/* -----------------------bird animation--------------------- */
+
+.rotateMove {/*逆时针旋转*/
+animation: rotateMove 6s linear infinite; -webkit-animation: rotateMove 6s linear infinite; }
+@keyframes rotateMove {
+	0% { transform: rotate(0deg); }
+	100% { transform: rotate(-360deg); }
+}
+@-webkit-keyframes rotateMove {
+	0% { -webkit-transform: rotate(0deg); }
+	100% { -webkit-transform: rotate(-360deg); }
+}
+@-moz-keyframes rotateMove {
+	0% { -moz-transform: rotate(0deg); }
+	100% { -moz-transform: rotate(-360deg); }
+}
+@-o-keyframes rotateMove {
+	0% { -o-transform: rotate(0deg); }
+	100% { -o-transform: rotate(-360deg); }
+}
+.rotateMove_b {/*顺时针旋转*/
+animation: rotateMove_b 6s linear infinite; -webkit-animation: rotateMove_b 6s linear infinite; }
+@keyframes rotateMove_b {
+	0% { transform: rotate(0deg); }
+	100% { transform: rotate(360deg); }
+}
+@-webkit-keyframes rotateMove_b {
+	0% { -webkit-transform: rotate(0deg); }
+	100% { -webkit-transform: rotate(360deg); }
+}
+@-moz-keyframes rotateMove_b {
+	0% { -moz-transform: rotate(0deg); }
+	100% { -moz-transform: rotate(360deg); }
+}
+@-o-keyframes rotateMove_b {
+	0% { -o-transform: rotate(0deg); }
+	100% { -o-transform: rotate(360deg); }
+}
+.eyebrowMoveLeft {/*皱眉毛-左*/
+animation: eyebrowMoveLeft 8s linear infinite; -webkit-animation: eyebrowMoveLeft 8s linear infinite; }
+@keyframes eyebrowMoveLeft {
+	0% { transform: rotate(0deg) translate(0, 0); }
+	10% { transform: rotate(-18deg) translate(-3px, 3px); }
+	50% { transform: rotate(-18deg) translate(-3px, 3px); }
+	60% { transform: rotate(0deg) translate(0, 0); }
+}
+@-webkit-keyframes eyebrowMoveLeft {
+	0% { -webkit-transform: rotate(0deg) translate(0, 0); }
+	10% { -webkit-transform: rotate(-18deg) translate(-3px, 3px); }
+	50% { -webkit-transform: rotate(-18deg) translate(-3px, 3px); }
+	60% { transform: rotate(0deg) translate(0, 0); }
+}
+@-moz-keyframes eyebrowMoveLeft {
+	0% { -moz-transform: rotate(0deg) translate(0, 0); }
+	10% { -moz-transform: rotate(-18deg) translate(-3px, 3px); }
+	50% { -moz-transform: rotate(-18deg) translate(-3px, 3px); }
+	60% { transform: rotate(0deg) translate(0, 0); }
+}
+@-o-keyframes eyebrowMoveLeft {
+	0% { -o-transform: rotate(0deg) translate(0, 0); }
+	10% { -o-transform: rotate(-18deg) translate(-3px, 3px); }
+	50% { -o-transform: rotate(-18deg) translate(-3px, 3px); }
+	60% { transform: rotate(0deg) translate(0, 0); }
+}
+.eyebrowMoveRight {/*皱眉毛-右*/
+animation: eyebrowMoveRight 8s linear infinite; -webkit-animation: eyebrowMoveRight 8s linear infinite; }
+@keyframes eyebrowMoveRight {
+	0% { transform: rotate(0deg) translate(0, 0); }
+	10% { transform: rotate(10deg) translate(0, 2px); }
+	50% { transform: rotate(10deg) translate(0, 2px); }
+	60% { transform: rotate(0deg) translate(0, 0); }
+}
+@-webkit-keyframes eyebrowMoveRight {
+	0% { -webkit-transform: rotate(0deg) translate(0, 0); }
+	10% { -webkit-transform: rotate(10deg) translate(0, 2px); }
+	50% { -webkit-transform: rotate(10deg) translate(0, 2px); }
+	60% { transform: rotate(0deg) translate(0, 0); }
+}
+@-moz-keyframes eyebrowMoveRight {
+	0% { -moz-transform: rotate(0deg) translate(0, 0); }
+	10% { -moz-transform: rotate(10deg) translate(0, 2px); }
+	50% { -moz-transform: rotate(10deg) translate(0, 2px); }
+	60% { transform: rotate(0deg) translate(0, 0); }
+}
+@-o-keyframes eyebrowMoveRight {
+	0% { -o-transform: rotate(0deg) translate(0, 0); }
+	10% { -o-transform: rotate(10deg) translate(0, 2px); }
+	50% { -o-transform: rotate(10deg) translate(0, 2px); }
+	60% { transform: rotate(0deg) translate(0, 0); }
+}
+.swingMoveRight {/*翅膀-右*/
+animation: swingMoveRight 1s linear infinite; -webkit-animation: swingMoveRight 1s linear infinite; }
+@keyframes swingMoveRight {
+	0% { transform: rotate(-28deg) translate(0, 0); }
+	50% { transform: rotate(38deg) translate(3px, 6px); }
+	100% { transform: rotate(-28deg) translate(0, 0); }
+}
+@-webkit-keyframes swingMoveRight {
+	0% { -webkit-transform: rotate(-28deg) translate(0, 0); }
+	50% { -webkit-transform: rotate(38deg) translate(3px, 6px); }
+	100% { -webkit-transform: rotate(-28deg) translate(0, 0); }
+}
+@-moz-keyframes swingMoveRight {
+	0% { -moz-transform: rotate(-28deg) translate(0, 0); }
+	50% { -moz-transform: rotate(38deg) translate(3px, 6px); }
+	100% { -moz-transform: rotate(-28deg) translate(0, 0); }
+}
+@-o-keyframes swingMoveRight {
+	0% { -o-transform: rotate(-28deg) translate(0, 0); }
+	50% { -o-transform: rotate(38deg) translate(3px, 6px); }
+	100% { -o-transform: rotate(-28deg) translate(0, 0); }
+}
+.swingMoveLeft {/*翅膀-左*/
+animation: swingMoveLeft 1s linear infinite; -webkit-animation: swingMoveLeft 1s linear infinite; }
+@keyframes swingMoveLeft {
+	0% { transform: rotate(28deg) translate(0, 0); }
+	50% { transform: rotate(-38deg) translate(0px, 4px); }
+	100% { transform: rotate(28deg) translate(0, 0); }
+}
+@-webkit-keyframes swingMoveLeft {
+	0% { -webkit-transform: rotate(28deg) translate(0, 0); }
+	50% { -webkit-transform: rotate(-38deg) translate(0px, 4px); }
+	100% { -webkit-transform: rotate(28deg) translate(0, 0); }
+}
+@-moz-keyframes swingMoveLeft {
+	0% { -moz-transform: rotate(28deg) translate(0, 0); }
+	50% { -moz-transform: rotate(-38deg) translate(0px, 4px); }
+	100% { -moz-transform: rotate(28deg) translate(0, 0); }
+}
+@-o-keyframes swingMoveLeft {
+	0% { -o-transform: rotate(28deg) translate(0, 0); }
+	50% { -o-transform: rotate(-38deg) translate(0px, 4px); }
+	100% { -o-transform: rotate(28deg) translate(0, 0); }
+}
