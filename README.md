@@ -1,3 +1,10 @@
 # CSS3LoadingAnimation
-几个CSS3小动画实例，做着玩的
+Made by CSS3, without Javascript.
 ## bayman
+<img src="https://github.com/Mankii/CSS3LoadingAnimation/blob/master/bayman/effect.gif?raw=true">
+## css3-loading-cup
+<img src="https://github.com/Mankii/CSS3LoadingAnimation/blob/master/css3-loading-cup/effect.gif?raw=true">
+## css3-loading-bearbird
+<img src="https://github.com/Mankii/CSS3LoadingAnimation/blob/master/css3-loading-bearbird/effect.gif?raw=true">
+## css3-loading-cicle
+<img src="https://github.com/Mankii/CSS3LoadingAnimation/blob/master/css3-loading-cicle/effect.gif?raw=true">
